@@ -1,0 +1,8 @@
+---
+layout: none
+---
+[{% for post in site.posts %}{
+	"name": "{{post.name}}",
+	"website": "{{post.website}}",
+	"tags": "{{ post.tags | array_to_sentence_string }}",
+}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
